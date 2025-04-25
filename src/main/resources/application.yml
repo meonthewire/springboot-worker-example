@@ -1,0 +1,9 @@
+aws:
+  region: ${AWS_REGION}
+  sqs:
+    queue_name: ${AWS_SQS_QUEUE_NAME}
+    endpoint: ${AWS_SQS_ENDPOINT}
+    consumer:
+      maxMessagePerPoll: ${SQS_MAX_MESSAGES_PER_POLL:5}
+      pollTimeout: ${SQS_POLL_TIMEOUT:20}
+      maxConcurrentMessages: ${SQS_MAX_CONCURRENT_MESSAGES:5}
